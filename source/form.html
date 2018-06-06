@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Кэтенерджи</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="page-header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </li>
+        <li class="nav-list__item">Главная</li>
+        <li class="nav-list__item"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="nav-list__item"><a href="form.html">Подбор программы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="programm-selection">
+      <h1 class="programm-selection__title">Подбор программы</h1>
+      <p class="programm-selection__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <form class="form">
+        <ul class="form-list">
+          <li class="form-list__item form-list__item--full-name">
+            <label class="form__title" for="last-name">Фамилия:</label>
+            <input class="form__text-input" name="last-name" type="text" id="last-name" placeholder="Укажите фамилию *" />
+          </li>
+          <li class="form-list__item form-list__item--full-name">
+            <label class="form__title" for="first-name">Имя:</label>
+            <input class="form__text-input" name="first-name" type="text" id="first-name" placeholder="Введите ваше имя *" />
+          </li>
+          <li class="form-list__item form-list__item--full-name">
+            <label class="form__title" for="patronymic">Отчество:</label>
+            <input class="form__text-input" name="patronymic" type="text" id="patronymic" placeholder="Ну и отчество тоже" />
+          </li>
+        </ul>
+        <ul class="programms-list">
+          <li class="programms-list__item">
+            <input class="visually-hidden form__radio" name="programm" value="weight-loss" type="radio" id="programm__loss" checked/>
+            <label class="form__label" for="programm__loss">Похудение</label>
+          </li>
+          <li class="programms-list__item">
+            <input class="visually-hidden form__radio" name="programm" value="weight-growth" type="radio" id="programm__growth" />
+            <label class="form__label" for="programm__growth">Набор массы</label>
+          </li>
+          <li class="programms-list__item">
+            <input class="visually-hidden form__radio" name="programm" value="dont-know" type="radio" id="programm__dont-know" />
+            <label class="form__label" for="programm__dont-know">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
+        <div class="contacts">
+          <h2 class="form__header contacts__header">Контактная данные (владельца кота)</h2>
+          <ul class="contacts-list">
+            <li class="contacts-list__item">
+              <label class="form__title" for="contacts-list__e-mail">E-MAIL:*</label>
+              <input class="form__text-input" name="phone-number" type="email" id="contacts-list__e-mail" placeholder="kuklachev@gmail.com" />
+            </li>
+            <li class="contacts-list__item">
+              <label class="form__title" for="contacts-list__phone">ТЕЛЕФОН:*</label>
+              <input class="form__text-input" name="e-mail" type="tel" id="contacts-list__phone" placeholder="8 (960) 900-60-90" />
+            </li>
+          </ul>
+        </div>
+        <div class="comments">
+          <h2 class="form__header comments__header">Комментарий</h2>
+          <textarea id="comments__text" name="text" placeholder="Расскажите обо всех повадках кота" rows="5"></textarea>
+        </div>
+        <div class="more">
+          <h2 class="form__header more__header">Дополнительно</h2>
+          <ul class="more-list">
+            <li class="more-list__item">
+              <input class="visually-hidden form__checkbox" name="sugar" type="checkbox" id="more-list__sugar" checked/>
+              <label class="form__label" for="more-list__sugar">Сахарозаменитель</label>
+            </li>
+            <li class="more-list__item">
+              <input class="visually-hidden form__checkbox" name="water" type="checkbox" id="more-list__water" />
+              <label class="form__label" for="more-list__water">Питьевая вода</label>
+            </li>
+            <li class="more-list__item">
+              <input class="visually-hidden form__checkbox" name="milk" type="checkbox" id="more-list__milk" />
+              <label class="form__label" for="more-list__milk">Молоко</label>
+            </li>
+            <li class="more-list__item">
+              <input class="visually-hidden form__checkbox" name="vitamins" type="checkbox" id="more-list__vitamins" />
+              <label class="form__label" for="more-list__vitamins">Витамины</label>
+            </li>
+          </ul>
+        </div>
+          <button class="button form__button">Отправить заявку</button>
+          <p class="form__required">* — Обязательные поля</p>
+      </form>
+    </section>
+    <section class="partnership">
+      <p class="partnership__offer">приглашаем к сотрудничеству дилеров!</p>
+      <p class="partnership__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <img class="partnership__map" />
+    </section>
+  </main>
+  <footer class="page-footer">
+    <img class="page-footer__logo" />
+    <ul class="social-list">
+      <li class="social-list__item"><span class="visually-hidden">VK</span></li>
+      <li class="social-list__item"><span class="visually-hidden">Instagram</span></li>
+      <li class="social-list__item"><span class="visually-hidden">Facebook</span></li>
+    </ul>
+    <div class="developed">
+      <span class="developed__by">HTML Academy</span>
+      <img class="developed__logo" />
+    </div>
+  </footer>
+</body>
