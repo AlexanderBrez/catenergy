@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
+var gulpBemCss = require("gulp-bem-css");
 var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -15,6 +16,16 @@ var webp = require("gulp-webp");
 var run = require("run-sequence");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
+
+gulp.task('BEM', () => {
+  return gulp.src('source/*.html')
+    .pipe(gulpBemCss({
+      folder: 'source/less/blocks', // Path for creating directories and stylesheet files.
+      extension: 'less', // Extension of stylesheet files
+      elementSeparator: '__', // Element separator in class names
+      modifierSeparator: '--' // Modifier separator in class names
+    }))
+});
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -35,12 +46,12 @@ gulp.task("compress", function () {
     .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
-
+/*
 gulp.task("html", function () {
   return gulp.src("source/*.html")
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build"));
-});
+}); */
 
 gulp.task("serve", ["style"], function() {
   server.init({
